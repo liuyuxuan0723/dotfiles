@@ -51,7 +51,7 @@ ssh-keygen -t rsa -b 4096 -C "liuyuxuan7723gmail.com"
 cat ~/.ssh/id_rsa.pub
 ```
 
-- oh-my-zsh](https://ohmyz.sh/#install)
+- [oh-my-zsh](https://ohmyz.sh/#install)
 
 ```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -60,7 +60,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 - [powerlevel10k](https://github.com/romkatv/powerlevel10k )
 
 ```shell
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 ```
 
@@ -160,19 +160,3 @@ curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.ja
 ```shell
 ./syncToLocal.sh
 ```
-
-### 补充配置
-
-```shell
-# 建议手动注入插件，避免配置重复
-vim ~/.zshrc
-plugins=(
-    git
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-    kube-ps1
-    kubectl
-)
-source ~/.zshrc
-```
-
