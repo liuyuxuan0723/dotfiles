@@ -1,12 +1,11 @@
+.config/iterm2
 .bashrc
 .zshrc
 .vimrc
 .gitconfig
 .p10k.zsh
-.config
 .vscode
 .cursor
 .docker
 .conda
 .npm
-.g
