@@ -160,3 +160,31 @@ curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.ja
 ```shell
 ./syncToLocal.sh
 ```
+
+```shell
+on run {input, parameters}
+	-- 检查iTerm2是否已经打开
+	tell application "System Events"
+		set isRunning to (count of (every process whose name is "iTerm2")) > 0
+	end tell
+	
+	-- 如果iTerm2没有运行，则启动它并创建一个新窗口
+	if not isRunning then
+		tell application "iTerm"
+			activate
+			create window with default profile
+		end tell
+	else
+		-- 如果iTerm2已经运行，切换到它并创建一个新窗口（如果需要）
+		tell application "iTerm"
+			activate
+			if (count of windows) = 0 then
+				create window with default profile
+			end if
+		end tell
+	end if
+	
+	return input
+end run
+```
+
