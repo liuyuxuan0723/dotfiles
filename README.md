@@ -4,30 +4,21 @@
 - 命令行工具
 - 开发环境
 
-## 快速开始
+快速开始
+
 ### 应用软件
 
-- [🪜](https://github.com/Clash-Verge-rev/clash-verge-rev/releases )
-
-- [chrome](https://www.google.com/chrome/?brand=FKPE&ds_kid=43700081222624393&gad_source=1&gclid=CjwKCAjwp8--BhBREiwAj7og176VBNdx_nh44ppjIG9Y-UJx_-ifOFELFdtp1oUMC-abHCwhBI1zbhoCjVcQAvD_BwE&gclsrc=aw.ds )
-
-- [typora](https://typoraio.cn/ )
-
-- [vscode](https://code.visualstudio.com/ )
-
-- [cursor](https://www.cursor.com/cn )
-
-- [goland](https://www.jetbrains.com/go/ )
-
-- [poe](https://poe.com/login )
-
-- [docker](https://www.docker.com/products/docker-desktop/ )
-
-- [lark](https://www.feishu.cn/ )
-
-- [wechat](https://weixin.qq.com/ )
-
-- [iterms](https://iterm2.com/downloads.html )
+- [🪜](https://github.com/Clash-Verge-rev/clash-verge-rev/releases)
+- [chrome](https://www.google.com/chrome/?brand=FKPE&ds_kid=43700081222624393&gad_source=1&gclid=CjwKCAjwp8--BhBREiwAj7og176VBNdx_nh44ppjIG9Y-UJx_-ifOFELFdtp1oUMC-abHCwhBI1zbhoCjVcQAvD_BwE&gclsrc=aw.ds)
+- [typora](https://typoraio.cn/)
+- [vscode](https://code.visualstudio.com/)
+- [cursor](https://www.cursor.com/cn)
+- [goland](https://www.jetbrains.com/go/)
+- [poe](https://poe.com/login)
+- [docker](https://www.docker.com/products/docker-desktop/)
+- [lark](https://www.feishu.cn/)
+- [wechat](https://weixin.qq.com/)
+- [iterms](https://iterm2.com/downloads.html)
 - navicate
 - postman
 
@@ -57,7 +48,7 @@ cat ~/.ssh/id_rsa.pub
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-- [powerlevel10k](https://github.com/romkatv/powerlevel10k )
+- [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 
 ```shell
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
@@ -95,6 +86,12 @@ brew install kube-ps1
 
 ```shell
 brew install yq
+```
+
+- [kubecm](https://github.com/sunny0826/kubecm): 多集群kubeconfig管理
+
+```shell
+brew install kubecm
 ```
 
 ### 开发环境
@@ -148,7 +145,6 @@ curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.ja
 ### dotfile同步到本地仓库
 
 - 同步时注意修改哪些需要同步
-
 - 超过2MB的文件夹限制了无法同步
 
 ```shell
@@ -167,7 +163,7 @@ on run {input, parameters}
 	tell application "System Events"
 		set isRunning to (count of (every process whose name is "iTerm2")) > 0
 	end tell
-	
+
 	-- 如果iTerm2没有运行，则启动它并创建一个新窗口
 	if not isRunning then
 		tell application "iTerm"
@@ -183,8 +179,7 @@ on run {input, parameters}
 			end if
 		end tell
 	end if
-	
+
 	return input
 end run
 ```
-

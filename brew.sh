@@ -11,3 +11,5 @@ brew install kube-ps1
 brew install yq
 
 brew install --cask miniconda
+
+brew install kubecm
